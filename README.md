@@ -12,7 +12,13 @@ An attempt at recreating the popular game Tetris using pygame.
 ## How it Works ?
 1. It has 4 classes Block, App ,Tetris and Tetromino where app class contolls rest of classes. <br>
 2. Block controls appearance of blocks,Teromino controls each set of blocks and Tetris controls all tetrominos in plane field. <br>
-3. Embed video of project demo
+
+## Video Demo
+
+
+https://user-images.githubusercontent.com/75241396/229307350-52e0dc8b-23fa-4478-b01f-4d1c231aae20.mp4
+
+
 ## Libraries used
 pygame - 2.3.0
 ## How to configure
