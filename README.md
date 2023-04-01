@@ -3,19 +3,25 @@
 
 
 
-# Project Name
-Long Description about project. This project do that. This project is awesome...
+# Tetris
+An attempt at recreating the popular game Tetris using pygame.
 ## Team members
-1. Name [Embed personal github URL]
-2. Name [Embed perosnal github URL]
-## Link to product walkthrough
-[link to video]
+1. Gokul Bejoy [https://github.com/kur0n0k0]
+2. Harikrishnan B. [https://github.com/harikrishnan-git]
+3. Johan B.George [https://github.com/johan-BG]
 ## How it Works ?
 1. Explaining the working of project
 2. Embed video of project demo
 ## Libraries used
-Library Name - Version
+pygame - 2.3.0
+sys - 
 ## How to configure
-Instructions for setting up project
+1. Install Python 3.10.6
+2. Install necessary libraries using pip
+3. Run the main.py file
 ## How to Run
-Instructions for running
+### Controls
+Up-Arrow : Rotate
+Left-Arrow : Move block left
+Right-Arrow : Move block right
+Down-Arrow: Make block fall faster
