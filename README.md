@@ -10,8 +10,9 @@ An attempt at recreating the popular game Tetris using pygame.
 2. Harikrishnan B. [https://github.com/harikrishnan-git]
 3. Johan B.George [https://github.com/johan-BG]
 ## How it Works ?
-1. Explaining the working of project
-2. Embed video of project demo
+1. It has 4 classes Block,App,Tetris and Tetromino where app class contolls rest of classes.
+2. Block contorls appearance of blocks,Teromino controls each set of blocks and tetris controls all tetrominos in plane field.
+3. Embed video of project demo
 ## Libraries used
 pygame - 2.3.0
 sys - 
@@ -21,7 +22,7 @@ sys -
 3. Run the main.py file
 ## How to Run
 ### Controls
-Up-Arrow : Rotate <br>
-Left-Arrow : Move block left <br>
-Right-Arrow : Move block right <br>
-Down-Arrow: Make block fall faster <br>
+Up-Arrow : Rotate
+Left-Arrow : Move block left
+Right-Arrow : Move block right
+Down-Arrow: Make block fall faster
