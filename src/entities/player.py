@@ -31,13 +31,13 @@ class Player(Entity):
 
     def input(self):
         pressed = pygame.key.get_pressed()
-        if pressed[pygame.K_w]:
+        if pressed[pygame.K_w] or pressed[pygame.K_UP]:
             self.direction = 'up'
-        if pressed[pygame.K_s]:
+        if pressed[pygame.K_s] or pressed[pygame.K_DOWN]:
             self.direction = 'down'
-        if pressed[pygame.K_a]:
+        if pressed[pygame.K_a] or pressed[pygame.K_LEFT]:
             self.direction = 'left'
-        if pressed[pygame.K_d]:
+        if pressed[pygame.K_d] or pressed[pygame.K_RIGHT]:
             self.direction = 'right'
         if pressed[pygame.K_e] and pygame.time.get_ticks() - self.time > 300:
             self.time = pygame.time.get_ticks()
@@ -67,13 +67,21 @@ class Player(Entity):
         constant_dt = self.game.dt
         vel_up = [0, -self.speed * constant_dt]
         vel_up = [i * pressed[pygame.K_w] for i in vel_up]
+        vel_up1 = [0, -self.speed * constant_dt]
+        vel_up1 = [i * pressed[pygame.K_UP] for i in vel_up1]
         vel_down = [0, self.speed * constant_dt]
         vel_down = [i * pressed[pygame.K_s] for i in vel_down]
+        vel_down1 = [0, self.speed * constant_dt]
+        vel_down1 = [i * pressed[pygame.K_DOWN] for i in vel_down1]
         vel_left = [-self.speed * constant_dt, 0]
         vel_left = [i * pressed[pygame.K_a] for i in vel_left]
+        vel_left1 = [-self.speed * constant_dt, 0]
+        vel_left1 = [i * pressed[pygame.K_LEFT] for i in vel_left1]
         vel_right = [self.speed * constant_dt, 0]
         vel_right = [i * pressed[pygame.K_d] for i in vel_right]
-        vel = zip(vel_up, vel_down, vel_left, vel_right)
+        vel_right1 = [self.speed * constant_dt, 0]
+        vel_right1 = [i * pressed[pygame.K_RIGHT] for i in vel_right1]
+        vel = zip(vel_up, vel_up1, vel_down,vel_down1, vel_left,vel_left1, vel_right,vel_right1)
         vel_list = [sum(item) for item in vel]
 
         x = sqrt(pow(vel_list[0], 2) + pow(vel_list[1], 2))
@@ -85,7 +93,7 @@ class Player(Entity):
         else:
             self.set_velocity(vel_list)
 
-        if pygame.mouse.get_pressed()[0] and pygame.time.get_ticks() - self.time > self.attack_cooldown \
+        if (pygame.mouse.get_pressed()[0] or (pygame.key.get_pressed() and pressed[pygame.K_k]))and pygame.time.get_ticks() - self.time > self.attack_cooldown \
                 and self.weapon:
             self.time = pygame.time.get_ticks()
             self.attacking = True
