@@ -21,7 +21,7 @@ sys -
 3. Run the main.py file
 ## How to Run
 ### Controls
-Up-Arrow : Rotate
-Left-Arrow : Move block left
-Right-Arrow : Move block right
-Down-Arrow: Make block fall faster
+Up-Arrow : Rotate <br>
+Left-Arrow : Move block left <br>
+Right-Arrow : Move block right <br>
+Down-Arrow: Make block fall faster <br>
