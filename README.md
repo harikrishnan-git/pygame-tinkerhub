@@ -14,7 +14,6 @@ An attempt at recreating the popular game Tetris using pygame.
 2. Embed video of project demo
 ## Libraries used
 pygame - 2.3.0
-sys - 
 ## How to configure
 1. Install Python 3.10.6
 2. Install necessary libraries using pip
